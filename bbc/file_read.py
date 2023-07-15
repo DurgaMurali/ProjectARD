@@ -1,8 +1,28 @@
+import openpyxl
 import pandas
 
 from bbc.accounts_receivable import AccountsReceivable, MarginableAR
 
 def read_accounts_receivable(file_name) -> AccountsReceivable:
+        # Read insured AR
+    # To open the workbook
+    # workbook object is created
+    wb_obj = openpyxl.load_workbook(file_name)
+    sheet_obj = wb_obj.get_sheet_by_name("Insured AR")
+    max_col = sheet_obj.max_column
+    max_row = sheet_obj.max_row
+
+    # Loop will print all columns name
+    # for i in range(1, max_col + 1): 
+    #     for j in range(1, max_row + 1):
+    #         cell_obj = sheet_obj.cell(row=j, column=i)
+    #         if cell_obj != None
+    #          header_row = j
+    #         break
+    #         else
+    #          return
+
+
     # Read insured AR
     file_AR = pandas.read_excel(file_name, sheet_name="Insured AR", skiprows=[0, 1])
     insured_ar_total = file_AR["Balance"].sum()
