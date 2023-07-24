@@ -44,20 +44,48 @@ def read_accounts_receivable(file_name) -> AccountsReceivable:
     Total_AR = ["Balance","Total","Balance Due","Due"]
         
     if cell_obj_12 in above_90Days:
-    if file_AR_RN(row=max_row, column=2)= file_AR????????
+
+
+    if file_AR_RN(row=max_row, column=2) = file_AR_RN.iloc[0:max_row-1].sum() # this has to be modified to sum the rows only from the column
+            file_AR = file_AR[:-1]
+
             Insured_AR_above90Days = file_AR["cell_obj_12"].sum()
     elif cell_obj_13 in above_90Days:
-            Insured_AR_above90Days = file_AR["cell_obj_13"].sum() 
+
+    if file_AR_RN(row=max_row, column=3) = file_AR_RN.iloc[0:max_row-1].sum() # this has to be modified to sum the rows only from the column
+            file_AR = file_AR[:-1]
+
+    Insured_AR_above90Days = file_AR["cell_obj_13"].sum() 
     elif cell_obj_14 in above_90Days:
-            Insured_AR_above90Days = file_AR["cell_obj_14"].sum() 
+    
+    if file_AR_RN(row=max_row, column=4) = file_AR_RN.iloc[0:max_row-1].sum() # this has to be modified to sum the rows only from the column
+            file_AR = file_AR[:-1]
+
+    Insured_AR_above90Days = file_AR["cell_obj_14"].sum() 
     elif cell_obj_15 in above_90Days:
-            Insured_AR_above90Days = file_AR["cell_obj_15"].sum() 
+
+    if file_AR_RN(row=max_row, column=5) = file_AR_RN.iloc[0:max_row-1].sum() # this has to be modified to sum the rows only from the column
+            file_AR = file_AR[:-1]
+
+    Insured_AR_above90Days = file_AR["cell_obj_15"].sum() 
     elif cell_obj_16 in above_90Days:
-            Insured_AR_above90Days = file_AR["cell_obj_16"].sum() 
+
+    if file_AR_RN(row=max_row, column=6) = file_AR_RN.iloc[0:max_row-1].sum() # this has to be modified to sum the rows only from the column
+            file_AR = file_AR[:-1]
+
+    Insured_AR_above90Days = file_AR["cell_obj_16"].sum() 
     elif cell_obj_17 in above_90Days:
-            Insured_AR_above90Days = file_AR["cell_obj_13"].sum() 
+
+    if file_AR_RN(row=max_row, column=7) = file_AR_RN.iloc[0:max_row-1].sum() # this has to be modified to sum the rows only from the column
+            file_AR = file_AR[:-1]
+
+    Insured_AR_above90Days = file_AR["cell_obj_13"].sum() 
     else cell_obj_18 in above_90Days:
-            Insured_AR_above90Days = file_AR["cell_obj_13"].sum() 
+
+    if file_AR_RN(row=max_row, column=8) = file_AR_RN.iloc[0:max_row-1].sum() # this has to be modified to sum the rows only from the column
+            file_AR = file_AR[:-1]
+
+    Insured_AR_above90Days = file_AR["cell_obj_13"].sum() 
 
     if cell_obj_12 in Total_AR:
             Insured_AR_Total = file_AR["cell_obj_12"].sum()
